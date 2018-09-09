@@ -5,7 +5,7 @@ def _custom_compile_impl(ctx):
     imports += target.files
 
   cmd = "gcc "
-  if ctx.attr.generateObjectFile:
+  if ctx.attr.generate_object_file:
     cmd += "-c "
 
   cmd += ctx.attr.src.files.to_list()[0].path + " -o " + ctx.outputs.out.path
@@ -29,7 +29,7 @@ custom_compile = rule(
     "imports": attr.label_list(
       allow_files = True,
     ),
-    "generateObjectFile": attr.bool(
+    "generate_object_file": attr.bool(
       default = False,
     ),
     "out": attr.output(

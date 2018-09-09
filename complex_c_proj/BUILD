@@ -7,7 +7,7 @@ custom_compile(
 		"func.h",
 		"numbers.h",
 	],
-	generateObjectFile = True,
+	generate_object_file = True,
 	out = "hello.o",
 )
 
@@ -17,7 +17,7 @@ custom_compile(
 	imports = [
 		"func.h",
 	],
-	generateObjectFile = True,
+	generate_object_file = True,
 	out = "func.o",
 )
 
@@ -27,7 +27,7 @@ custom_compile(
 	imports = [
 		"numbers.h",
 	],
-	generateObjectFile = True,
+	generate_object_file = True,
 	out = "numbers.o",
 )
 

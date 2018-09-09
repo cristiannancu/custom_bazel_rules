@@ -7,7 +7,8 @@ def _custom_compile_impl(ctx):
   ctx.actions.run_shell(
     inputs = ctx.attr.src.files + imports,
     outputs = [ctx.outputs.out],
-    command = "gcc " + ctx.attr.src.files.to_list()[0].path + " -o " + ctx.outputs.out.path,
+    command = "gcc " + ctx.attr.src.files.to_list()[0].path
+      + " -o " + ctx.outputs.out.path,
   )
 
 custom_compile = rule(
